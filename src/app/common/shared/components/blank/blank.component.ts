@@ -1,14 +1,12 @@
 import { Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { SharedModule } from '../../shared.module';
 
 @Component({
   selector: 'app-blank',
   standalone: true,
-  imports: [CommonModule,
-  RouterModule],
+  imports: [SharedModule],
   templateUrl: './blank.component.html',
-  styleUrls: ['./blank.component.css']
+  styleUrls: ['./blank.component.scss']
 })
 export class BlankComponent {
   @Input() title: string = "";

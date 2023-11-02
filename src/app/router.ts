@@ -1,22 +1,19 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
-  {
-    path: 'login',
+  {path: 'login',
     loadComponent: () =>
       import('./components/auth/login/login.component').then(
         (c) => c.LoginComponent
       ),
   },
-  {
-    path: 'register',
+  {path: 'register',
     loadComponent: () =>
       import('./components/auth/register/register.component').then(
         (c) => c.RegisterComponent
       ),
   },
-  {
-    path: '',
+  {path: '',
     loadComponent: () =>
       import('./components/layouts/layouts.component').then(
         (c) => c.LayoutsComponent
@@ -31,4 +28,39 @@ export const routes: Routes = [
       },
     ],
   },
+  { path: 'admin',
+  loadComponent: () =>
+    import('./components/users/admin/admin.component').then(
+      (c) => c.AdminComponent),
+      children:[
+        {
+          path:"app-doctor-list",
+          loadComponent:()=>import("./components/users/admin/components/doctor-list/doctor-list.component").then((c)=>c.DoctorListComponent)
+        },{
+          path:"app-add-doctor",
+          loadComponent:()=>import("./components/users/admin/components/doctor-list/add-doctor/add-doctor.component").then((c)=>c.AddDoctorComponent)
+        },
+        {
+          path:"app-hospital-list",
+          loadComponent:()=>import("./components/users/admin/components/hospital-list/hospital-list.component").then((c)=>c.HospitalListComponent)
+        },
+        {
+          path:"app-services-list",
+          loadComponent:()=>import("./components/users/admin/components/service-list/service-list.component").then((c)=>c.ServiceListComponent)
+        },
+       
+      ]
+  },
+  { path: 'doctors',
+  loadComponent: () =>
+    import('./components/users/doctors/doctors.component').then(
+      (c) => c.DoctorsComponent
+    )
+
+  },
+  { path: 'patiens',
+  loadComponent: () =>
+  import('./components/users/patients/patients.component').then(
+    (c) => c.PatientsComponent)
+  }
 ];
