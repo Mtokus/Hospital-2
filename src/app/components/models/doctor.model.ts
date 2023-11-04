@@ -2,7 +2,7 @@ export class DoctorModel {
   _id: String = '';
   name: String = '';
   hospitalName: String = '';
-  x: String = '';
+  branch: String = '';
   email: String = '';
   phoneNumber: string = '';
   descriptipn: String = '';

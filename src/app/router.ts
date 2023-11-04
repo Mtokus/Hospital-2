@@ -34,18 +34,18 @@ export const routes: Routes = [
       (c) => c.AdminComponent),
       children:[
         {
-          path:"app-doctor-list",
+          path:"doctor-list",
           loadComponent:()=>import("./components/users/admin/components/doctor-list/doctor-list.component").then((c)=>c.DoctorListComponent)
         },{
-          path:"app-add-doctor",
+          path:"add-doctor",
           loadComponent:()=>import("./components/users/admin/components/doctor-list/add-doctor/add-doctor.component").then((c)=>c.AddDoctorComponent)
         },
         {
-          path:"app-hospital-list",
+          path:"hospital-list",
           loadComponent:()=>import("./components/users/admin/components/hospital-list/hospital-list.component").then((c)=>c.HospitalListComponent)
         },
         {
-          path:"app-services-list",
+          path:"services-list",
           loadComponent:()=>import("./components/users/admin/components/service-list/service-list.component").then((c)=>c.ServiceListComponent)
         },
        

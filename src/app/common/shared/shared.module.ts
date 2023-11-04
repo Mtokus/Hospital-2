@@ -4,18 +4,16 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
-
-
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
     FormsModule,
-    RouterModule,HttpClientModule
-  ],exports :[
-    CommonModule,
-    FormsModule,
-    RouterModule,HttpClientModule
-  ]
+    RouterModule,
+    
+    
+    
+  ],
+  exports: [CommonModule, FormsModule, RouterModule, HttpClientModule],
 })
-export class SharedModule { }
+export class SharedModule {}

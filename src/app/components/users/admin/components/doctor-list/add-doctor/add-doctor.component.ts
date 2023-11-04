@@ -7,8 +7,8 @@ import { SharedModule } from 'src/app/common/shared/shared.module';
   standalone: true,
   imports: [SharedModule],
   templateUrl: './add-doctor.component.html',
-  styleUrls: ['./add-doctor.component.scss']
+  styleUrls: ['./add-doctor.component.scss'],
 })
 export class AddDoctorComponent {
-
+  addNewDoctor() {}
 }
