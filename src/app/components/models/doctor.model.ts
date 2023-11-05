@@ -1,11 +1,11 @@
 export class DoctorModel {
   _id: String = '';
   name: String = '';
-  hospitalName: String = '';
   branch: String = '';
+  hospitalName: String = '';
   email: String = '';
   phoneNumber: string = '';
   descriptipn: String = '';
   date: Date;
-  image: File
+  avatar: File;
 }
