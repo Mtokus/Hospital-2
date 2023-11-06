@@ -8,7 +8,7 @@
   
   
       <button class="btn btn-outline-primary" (click)="addDoctor()">
-        <i class="fa fa-plus"></i>
+        <i class="fa fa-plus"></i>Doktor Ekle
       </button>
       <div style="float: right;">
           <input type="search"  class="form-control" placeholder="Doktor Ara..">
@@ -24,26 +24,23 @@
               <th scope="col">Alan</th>
               <th scope="col">E-mail</th>
               <th scope="col">Telefon Numarası</th>
+              <th scope="col">Kayıt Tarihi </th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Kardiyolog</td>
-              <td>Beyin cerrahı</td>
-              <td>aasdasd@gmail.com</td>
-              <td>0123456498</td>
+            <tr *ngFor="let d of doctorList let i =index">
+              <th scope="row">{{i+1}}</th>
+              <td>{{d.name}}</td>
+              <td>{{d.hospitalName}}</td>
+              <td>{{d.branch}}</td>
+              <td>{{d.email}}</td>
+              <td>{{d.phoneNumber}}</td> 
+              <td>{{d.date }}</td>
+              <td><button  >
+                <i class="fa-solid fa-trash-can"></i>
+              </button></td>
             </tr>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Kardiyolog</td>
-              <td>Beyin cerrahı</td>
-              <td>aasdasd@gmail.com</td>
-              <td>0123456498</td>
-            </tr>
-            
+           
           </tbody>
         </table>
       </div>
