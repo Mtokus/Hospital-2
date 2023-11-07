@@ -5,11 +5,12 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import {MatNativeDateModule} from '@angular/material/core';
-import {MatButtonModule} from '@angular/material/button';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
-
-
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatTableModule } from '@angular/material/table';
+import { MatSelectModule } from '@angular/material/select';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 @NgModule({
   declarations: [],
   imports: [
@@ -18,8 +19,12 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatGridListModule,
     MatFormFieldModule,
     MatInputModule,
-    MatDatepickerModule,MatNativeDateModule,MatButtonModule,
-    MatSnackBarModule
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatButtonModule,
+    MatSnackBarModule,
+    MatTableModule,
+    MatSelectModule,
   ],
   exports: [
     CommonModule,
@@ -27,8 +32,13 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatGridListModule,
     MatFormFieldModule,
     MatInputModule,
-    MatDatepickerModule,MatNativeDateModule,MatButtonModule,
-    MatSnackBarModule
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatButtonModule,
+    MatSelectModule,
+    MatSnackBarModule,
+    MatTableModule,
+    MatCheckboxModule,
   ],
 })
 export class MaterialModule {}

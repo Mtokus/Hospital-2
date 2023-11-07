@@ -1,0 +1,68 @@
+<mat-dialog-content [formGroup]="form"
+  ><div class="card">
+    <div class="card-header">
+      <h1>
+        <b>Branş Listesi </b>
+        <div style="float: right">
+          <input type="search" class="form-control" placeholder="Branş Ara.." />
+        </div>
+      </h1>
+      
+    </div>
+    <div class="card-body">
+      
+      <div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Branş Adı</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let b of branchList let i =index">
+              <th scope="row">{{i+1}}</th>
+              <td>{{b.branchName}}</td>
+              <td>
+                <button>
+                  <i class="fa-solid fa-trash-can"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <h2>
+    <b>{{ title }}</b>
+  </h2>
+  <div>
+    <mat-form-field>
+      <mat-label>Branş giriniz</mat-label>
+      <input
+        matInput
+        placeholder="pat@example.com"
+        formControlName="branchName"
+        required
+      />
+      <mat-error *ngIf=""></mat-error>
+    </mat-form-field>
+  </div>
+  <button
+    mat-raised-button
+    mat-dialog-close
+    color="primary"
+    (click)="addNewBranch()"
+  >
+    Kaydet
+  </button>
+  <button
+  mat-raised-button
+  mat-dialog-close
+  color="primary"
+  (click)="cancelNewBranch()"
+>
+  Vazgeç
+</button>
+</mat-dialog-content>

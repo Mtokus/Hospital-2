@@ -10,6 +10,9 @@
       <button class="btn btn-outline-primary" (click)="addDoctor()">
         <i class="fa fa-plus"></i>Doktor Ekle
       </button>
+      <button class="btn btn-outline-primary" style="margin-left: 12px;" (click)="addBranch()">
+        <i class="fa fa-plus"></i>Branş Ekle
+      </button>
       <div style="float: right;">
           <input type="search"  class="form-control" placeholder="Doktor Ara..">
       </div>
@@ -35,7 +38,7 @@
               <td>{{d.branch}}</td>
               <td>{{d.email}}</td>
               <td>{{d.phoneNumber}}</td> 
-              <td>{{d.date }}</td>
+              <td>{{d.date}}</td>
               <td><button  >
                 <i class="fa-solid fa-trash-can"></i>
               </button></td>
@@ -45,5 +48,5 @@
         </table>
       </div>
     </div>
-  </div>
+</div>
   <router-outlet></router-outlet>

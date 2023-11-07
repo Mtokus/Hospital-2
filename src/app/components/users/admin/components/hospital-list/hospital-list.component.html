@@ -1,1 +1,47 @@
-<p>hospital-list works!</p>
+<div class="card">
+    <div class="card-header">
+      <h1>
+        <b> Doktor Listesi </b>
+      </h1>
+    </div>
+    <div class="card-body">
+  
+  
+      <button class="btn btn-outline-primary" (click)="addHospital()">
+        <i class="fa fa-plus"></i>Hastane Ekle
+      </button>
+      <div style="float: right;">
+          <input type="search"  class="form-control" placeholder="Doktor Ara..">
+      </div>
+  
+      <div class="form-group">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Hastane Adı</th>
+              <th scope="col">İL</th>
+              <th scope="col">Telefon Numarası</th>
+              <th scope="col">E-mail</th>
+              <th scope="col">Adres </th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let h of hospitalList, let i=index">
+            <tr >
+              <th scope="row">{{i+1}} </th>
+              <td>{{h.hospitalName}}</td>
+              <td>{{h.hospitalCity}}</td>
+              <td>{{h.hospitalNumber}}</td>
+              <td>{{h.hospitalEmail}}</td>
+              <td>{{h.hospitalAddress}}</td> 
+              <td><button >
+                <i class="fa-solid fa-trash-can"></i>
+              </button></td>
+            </tr>
+           
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <router-outlet></router-outlet>

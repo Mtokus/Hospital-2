@@ -44,10 +44,7 @@ export const routes: Routes = [
           path:"hospital-list",
           loadComponent:()=>import("./components/users/admin/components/hospital-list/hospital-list.component").then((c)=>c.HospitalListComponent)
         },
-        {
-          path:"services-list",
-          loadComponent:()=>import("./components/users/admin/components/service-list/service-list.component").then((c)=>c.ServiceListComponent)
-        },
+        
        
       ]
   },

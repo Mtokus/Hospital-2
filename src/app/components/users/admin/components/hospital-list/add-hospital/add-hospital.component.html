@@ -1,1 +1,83 @@
-<p>add-hospital works!</p>
+<h1>{{ title }}</h1>
+<mat-dialog-content [formGroup]="form">
+  <mat-grid-list cols="2">
+    <mat-grid-tile>
+      <div>
+        <mat-form-field>
+          <mat-label>Hastane Adı Giriniz </mat-label>
+          <input
+            matInput
+            placeholder="Hastane Adı Giriniz"
+            formControlName="hospitalName"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Servisler</mat-label>
+          <mat-select formControlName="hospitalService" multiple>
+            <mat-option *ngFor="let services of hospitalServices" [value]="services">{{services}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Bulunduğu Şehir</mat-label>
+          <input
+            matInput
+            placeholder="Şehir Giriniz"
+            formControlName="hospitalCity"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Telefon Numarası</mat-label>
+          <input
+            matInput
+            placeholder="Telefon Numarası Giriniz "
+            formControlName="hospitalNumber"
+            required
+          />
+        </mat-form-field>
+      </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <div>
+        <mat-form-field>
+          <mat-label>Hastane E-mail</mat-label>
+          <input
+            matInput
+            placeholder="Hastane E-Mail"
+            formControlName="hospitalEmail"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Hastane Adresi</mat-label>
+          <input
+            matInput
+            placeholder="Adresi Yazınız"
+            formControlName="hospitalAddress"
+            required
+          />
+        </mat-form-field>
+        <div mat-dialog-actions>
+          <button
+            mat-raised-button
+            mat-dialog-close
+            color="primary"
+            (click)="addNewHospital()"
+          >
+            Kaydet
+          </button>
+          <button
+            mat-raised-button
+            mat-dialog-close
+            color="accent"
+            (click)="cancelNewHospital()"
+          >
+            Vazgeç
+          </button>
+        </div>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</mat-dialog-content>
