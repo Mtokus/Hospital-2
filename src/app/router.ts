@@ -55,9 +55,34 @@ export const routes: Routes = [
     )
 
   },
-  { path: 'patiens',
+  { path: 'patients',
   loadComponent: () =>
   import('./components/users/patients/patients.component').then(
-    (c) => c.PatientsComponent)
+    (c) => c.PatientsComponent),
+    children:[
+      {
+        path:"app-patient-home",
+        loadComponent:()=>import("./components/users/patients/patient-home/patient-home.component").then((c)=>c.PatientHomeComponent)
+      },
+      {
+        path:"get-appointment",
+        loadComponent:()=>import("./components/users/patients/get-appointment/get-appointment.component").then((c)=>c.GetAppointmentComponent)
+      },
+      {
+        path:"app-create-appointment",
+        loadComponent:()=>import("./components/users/patients/create-appointment/create-appointment.component").then((c)=>c.CreateAppointmentComponent)
+      },
+      {
+        path:"app-result-analysis",
+        loadComponent:()=>import("./components/users/patients/result-analysis/result-analysis.component").then((c)=>c.ResultAnalysisComponent)
+      },
+      {
+        path:"app-patient-information",
+        loadComponent:()=>import("./components/users/patients/patient-information/patient-information.component").then((c)=>c.PatientInformationComponent)
+      },
+      
+      
+    
+    ]
   }
 ];

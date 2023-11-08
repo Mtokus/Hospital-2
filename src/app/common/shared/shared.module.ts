@@ -10,8 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
     CommonModule,
     FormsModule,
     RouterModule,
-    HttpClientModule,ReactiveFormsModule
-    
+    HttpClientModule,
+    ReactiveFormsModule
     
   ],
   exports: [
@@ -19,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule, 
     RouterModule, 
     HttpClientModule,
-    ReactiveFormsModule],
+    ReactiveFormsModule,
+   ],
 })
 export class SharedModule {}

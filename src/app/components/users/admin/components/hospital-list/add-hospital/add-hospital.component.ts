@@ -21,7 +21,7 @@ export class AddHospitalComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) data: any,
     private _dialogref: MatDialogRef<AddHospitalComponent>
   ) {
-    this.title = data.title;
+    
   }
   ngOnInit(): void {
     this.form=this.fb.group({
@@ -31,6 +31,7 @@ export class AddHospitalComponent implements OnInit {
       hospitalNumber: ['', [Validators.required]],
       hospitalEmail: ['', [Validators.required,Validators.email]],
       hospitalAddress: ['', [Validators.required]],
+      hospitalPhoto:["",[Validators.required]]
 
     })
   }

@@ -1,0 +1,31 @@
+.picsum-img-wrapper img {
+  padding: 0px;
+  margin: 0px;
+  height: 675px;
+  object-fit: fill;
+}
+
+#contactUser {
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+}
+#choiceUser {
+  border-style: groove;
+  margin-left: 0px;
+  height: 335px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+//   border-radius: 6px;
+//   background: linear-gradient(145deg, #008E2C, #00C43D);
+//   box-shadow: 4px 4px 8px #ddc1a0, -4px -4px 8px #f7e5cc;
+
+  background: linear-gradient(145deg, #ffbb00e3, #f5d7b2);
+  box-shadow: 4px 4px 8px #ddc1a0, -4px -4px 8px #f7e5cc;
+}
+#contactUser :hover{
+    cursor: pointer;
+}
