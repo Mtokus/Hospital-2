@@ -18,6 +18,7 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { MatTableDataSource } from '@angular/material/table';
 
 bootstrapApplication(AppComponent, {
   providers: [
@@ -33,7 +34,7 @@ bootstrapApplication(AppComponent, {
       AngularFirestore,
       BrowserAnimationsModule,
       HttpClient,
-      DatePipe
+      DatePipe,MatTableDataSource
     ),
     provideAnimations(),
   ],

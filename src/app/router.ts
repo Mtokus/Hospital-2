@@ -44,6 +44,10 @@ export const routes: Routes = [
           path:"hospital-list",
           loadComponent:()=>import("./components/users/admin/components/hospital-list/hospital-list.component").then((c)=>c.HospitalListComponent)
         },
+        {
+          path:"unit-list",
+          loadComponent:()=>import("./components/users/admin/components/unit-list/unit-list.component").then((c)=>c.UnitListComponent)
+        }
         
        
       ]

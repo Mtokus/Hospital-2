@@ -1,0 +1,34 @@
+<mat-dialog-content [formGroup]="form">
+  <h2>
+    <b>{{ title }}</b>
+  </h2>
+  <div>
+    <mat-form-field>
+      <mat-label>Branş giriniz</mat-label>
+      <input
+        matInput
+        placeholder="pat@example.com"
+        formControlName="unitName"
+        required
+      />
+      <mat-error *ngIf=""></mat-error>
+    </mat-form-field>
+  </div>
+  <button
+    mat-raised-button
+    mat-dialog-close
+    color="primary"
+    (click)="addNewUnit()"
+  >
+    Kaydet
+  </button>
+  <button
+    style="margin-left: 5px"
+    mat-raised-button
+    mat-dialog-close
+    color="warn"
+    (click)="cancelNewUnit()"
+  >
+    Vazgeç
+  </button>
+</mat-dialog-content>

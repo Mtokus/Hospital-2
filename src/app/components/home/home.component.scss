@@ -1,3 +1,24 @@
+*{
+  overflow: hidden;
+}
+// .news{
+//   width: 700px; 
+//   height: 70px; 
+//   background-color: #3498db; 
+//   position:absolute;
+//   display: flex;
+//   justify-content: center;
+//   text-align: center;
+//   right: 0; 
+//   animation: homeNews 5s linear forwards; 
+//   cursor: pointer;
+
+// }
+// @keyframes homeNews {
+//   to {
+//       right: 100%; 
+//   }
+// }
 .picsum-img-wrapper img {
   padding: 0px;
   margin: 0px;
@@ -28,4 +49,94 @@
 }
 #contactUser :hover{
     cursor: pointer;
+}
+hr.style-eight {
+  overflow: visible; /* For IE */
+  padding: 0;
+  border: none;
+  border-top: medium double #333;
+  color: #333;
+  text-align: center;
+}
+hr.style-eight:after {
+  content: "§";
+  display: inline-block;
+  position: relative;
+  top: -0.7em;
+  font-size: 1.5em;
+  padding: 0 0.25em;
+  background: white;
+}
+footer{
+  width: 100%;
+}
+
+// .acceptButton{
+
+
+//   background: linear-gradient(145deg, #ffbb00e3, #f5d7b2);
+//   box-shadow: 4px 4px 8px #ddc1a0, -4px -4px 8px #f7e5cc;
+// }
+// .cancelButton{
+//   background: linear-gradient(145deg, #F44A3E, #f7e5cc);
+//   box-shadow: 4px 4px 8px #ddc1a0, -4px -4px 8px #f7e5cc;
+// }
+
+footer{
+  background-color:#F9CE6F ;
+  display: flex;
+  flex-direction: column;
+}
+.footerSocial{
+  margin-top: 14.9px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.socialList{
+  width: 100%;
+  height: 76px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socialList li{
+  display: flex;
+  width: 52px;
+  justify-content: center;
+  align-items: center;
+}
+.footerAboutUs{
+  display: flex;
+  margin-bottom: 14.9px;
+  justify-content: center;
+  align-items: center;
+}
+.aboutUs{
+  width: 32%;
+  height: 80px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  font-size: x-large;
+}
+// .hrAboutUs {
+//   height: 12px;
+//   border: 0;
+//   box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+// }
+
+.aboutUs li{
+text-decoration: underline;
+height: 76px;
+display: flex;
+align-items: center;
+
 }

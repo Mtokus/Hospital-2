@@ -31,4 +31,12 @@ export class DataService {
   getAllBranchs(){
     return this._afs.collection("Branch/").snapshotChanges();
   }
+  //Tıbbi Birim İşlemleri 
+  addNewUnit( medicalUnit:any){
+    medicalUnit.id=this._afs.createId();
+    return this._afs.collection("MedicalUnits/").add(medicalUnit)
+  }
+  getMedicalUnits(){
+    return this._afs.collection("MedicalUnits/").snapshotChanges();
+  }
 }

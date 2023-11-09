@@ -15,7 +15,7 @@
         <mat-form-field>
           <mat-label>Servisler</mat-label>
           <mat-select formControlName="hospitalService" multiple>
-            <mat-option *ngFor="let services of hospitalServices" [value]="services">{{services}}</mat-option>
+            <mat-option *ngFor="let units of unitList" [value]="units">{{units.unitName}}</mat-option>
           </mat-select>
         </mat-form-field>
         <mat-form-field>
