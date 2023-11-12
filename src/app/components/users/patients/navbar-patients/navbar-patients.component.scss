@@ -1,24 +1,25 @@
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding-left: 0;
-    
-    width: 200px;
-    background-color: #f1f1f1;
-  }
-  li{
-      margin-top: 12px;
-      
-  }
-  li a {
-    display: block;
-    color: #000;
-    padding: 8px 16px;
-    text-decoration: none;
-  }
-  
-  /* Change the link color on hover */
-  li a:hover {
-    background-color: #555;
-    color: white;
-  }
+.navbar {
+  margin: 0;
+  padding: 0;
+  height: 80px;
+  width: 100%;
+  background-color:#F9CE6F;
+  display: flex;
+}
+.patientOptions {
+  display: flex;
+  font-size: x-large;
+  justify-content: center;
+  list-style: none;
+  width: 600px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+.patientOptions li {
+  height: 46px;
+  background-color: #ffbb00e3;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}

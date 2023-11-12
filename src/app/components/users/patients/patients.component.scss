@@ -1,0 +1,30 @@
+.example-container {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+}
+mat-drawer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.sideBar {
+  height: 65%;
+  display: flex;
+  justify-content: flex-end;
+}
+.sideBar li {
+  margin: 0;
+  padding: 0;
+  width: 90px;
+  height: 56px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.sidebardiv{
+    display: flex;
+    flex-direction: column;
+}

@@ -1,4 +1,4 @@
-export interface MedicalUnits{
+export class MedicalUnits{
     position:Number;
     unitName:string
 }

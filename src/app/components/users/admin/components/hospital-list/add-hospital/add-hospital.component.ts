@@ -17,7 +17,7 @@ export class AddHospitalComponent implements OnInit {
   form!: FormGroup;
   title!: string;
   unitList : MedicalUnits[]=[];
-  hospitalServices:string[]=["Kardiyoloji","Ortopedi","Ortodonti","Beyin Cerrahisi","Beslenme ve Diyet","Nöroloji"]
+ 
 
   constructor(
     private  fb: FormBuilder,

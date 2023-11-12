@@ -1,9 +1,10 @@
+import { BranchModel } from "./branch.model";
 import { HospitalModel } from "./hospital.model";
 
 export class DoctorModel {
   _id: String = '';
   name: String = '';
-  branch: String = '';
+  branchName:BranchModel[]=[];
   hospitalName: HospitalModel[]=[]
   email: String = '';
   phoneNumber: string = '';
