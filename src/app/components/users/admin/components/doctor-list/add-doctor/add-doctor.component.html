@@ -31,8 +31,8 @@
         <mat-form-field>
           <mat-label>Branş Seçiniz</mat-label>
           <mat-select
-            formControlName="branch"
-            name="branch"
+            formControlName="branchName"
+            name="branchName"
             placeholder="Çalıştığı Hastane"
           >
             <mat-option *ngFor="let b of branchList" [value]="b.branchName">

@@ -1,11 +1,16 @@
-<div class="container text-center">
+<div class="container text-center"><h1>{{ title }}</h1>
   <div class="row">
     <div class="col">
-      <h1>{{ title }}</h1>
+      
       <mat-dialog-content [formGroup]="form">
         <mat-form-field>
           <mat-label>Hastane</mat-label>
-          <mat-select formControlName="hospitalName" name="hospitalName" [(ngModel)]="hospitalSelected">
+          <mat-select
+            id="hospitalName"
+            formControlName="hospitalName"
+            name="hospitalName"
+            [(ngModel)]="hospitalSelected"
+          >
             <mat-option>None</mat-option>
             <mat-option *ngFor="let h of hospitalList" [value]="h.hospitalName">
               {{ h.hospitalName }}
@@ -13,35 +18,39 @@
           </mat-select>
         </mat-form-field>
         <div>
-          <h1> {{hospitalSelected  }} </h1>
+          <h1>{{ hospitalSelected }}</h1>
         </div>
-        <mat-form-field>
-          <mat-label>Poliklinik</mat-label>
-          <mat-select formControlName="unitName" name="unitName">
-            <mat-option>None</mat-option>
-            <mat-option *ngFor="let u of unitList" [value]="u">
-              {{ u.unitName }}</mat-option
-            >
-          </mat-select>
-        </mat-form-field>
+
         <mat-form-field>
           <mat-label>Doktor</mat-label>
           <mat-select formControlName="doctorName" name="doctorName">
-            <mat-option>None</mat-option>
-            <mat-option *ngFor="let d of doctorList" [value]="d">
-              {{ d.name }}
+            <mat-option *ngFor="let doctor of doctorList" [value]="doctor">
+              {{ doctor.branchName }}-{{ doctor.name }}
             </mat-option>
           </mat-select>
         </mat-form-field>
-        <button
-          mat-raised-button
-          color="primary"
-          (click)="CreateNewAppointment()"
-        >
-          Randevu Al
-        </button>
+        
+       
       </mat-dialog-content>
     </div>
-    <div class="col">2 of 2</div>
+    <div class="col">
+
+      <mat-dialog-content [formGroup]="form">
+        <mat-form-field >
+        <mat-label>Randevu Saati</mat-label>
+        <mat-select formControlName="appointmentTime" name="appointmentTime">
+          <mat-option *ngFor="let time of availableAppointmentTimes" [value]="time">
+            {{ time }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" (click)="createNewAppointment()">Randevu Al</button>
+      
+      
+      </mat-dialog-content>
+
+    
+    </div>
   </div>
 </div>

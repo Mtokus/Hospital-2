@@ -41,7 +41,7 @@ export class AddDoctorComponent implements OnInit {
     this.form = this.fb.group({
       _id: ['', []],
       name: ['', [Validators.required]],
-      branch: ['', [Validators.required]],
+      branchName: ['', [Validators.required]],
       hospitalName: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
       password:["",[Validators.required]],
