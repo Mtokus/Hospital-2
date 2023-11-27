@@ -1,28 +1,23 @@
-<mat-dialog-content 
+<mat-dialog-content
   ><div class="card">
     <div class="card-header">
       <h1>
-        <b>Branş Listesi </b>
-        <div style="float: right">
-          <input type="search" class="form-control" placeholder="Branş Ara.." />
-        </div>
+        <b>Randevularım </b>
       </h1>
-      
     </div>
     <div class="card-body">
-      
       <div>
         <table class="table">
           <thead>
             <tr>
               <th scope="col">#</th>
-              <th scope="col">Branş Adı</th>
+              <th scope="col">Randevularım</th>
             </tr>
           </thead>
           <tbody>
-            <tr >
+            <tr *ngFor="let a of appointmentList">
               <th scope="row"></th>
-              <td></td>
+              <td> {{a.doctorName}} </td>
               <td>
                 <button>
                   <i class="fa-solid fa-trash-can"></i>
@@ -34,6 +29,4 @@
       </div>
     </div>
   </div>
-
-
 </mat-dialog-content>

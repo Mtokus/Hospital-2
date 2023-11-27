@@ -8,31 +8,25 @@ import { response } from 'express';
   standalone: true,
   imports: [SharedModule],
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
-  displayName:string;
-  email:string;
-  password:any
-constructor(
-  private _auth:AuthService
-){}
+  email: string;
+  password: string;
+  constructor(private _auth: AuthService) {}
 
-login(){
-
-  if(this.email==""){
-    alert ("lütfen E-mail Giriniz")
-    return;
+  login() {
+    this._auth.login(this.email,this.password)
+    
   }
-  if(this.password==""){
-    alert ("lütfen Şifre Giriniz")
-    return;
-
-  }
-  this._auth.login(this.email,this.password);
- 
-
-  
 }
+// if(this.email==""){
+//   alert ("lütfen E-mail Giriniz")
+//   return;
+// }
+// if(this.password==""){
+//   alert ("lütfen Şifre Giriniz")
+//   return;
 
-}
+// }
+// this._auth.login(this.email,this.password)

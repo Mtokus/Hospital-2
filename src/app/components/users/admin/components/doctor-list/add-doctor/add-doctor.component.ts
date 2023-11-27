@@ -24,7 +24,7 @@ export class AddDoctorComponent implements OnInit {
   title!: string;
   hide: boolean=true
 
-  name!: string;
+  doctorName!: string;
   branchList: BranchModel[]=[];
   hospitalList : HospitalModel[] = [];
   email!: string;
@@ -46,7 +46,7 @@ export class AddDoctorComponent implements OnInit {
     this.getBranchs();
     this.form = this.fb.group({
       _id: ['', []],
-      name: ['', [Validators.required]],
+      doctorName: ['', [Validators.required]],
       branchName: ['', [Validators.required]],
       hospitalName: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],

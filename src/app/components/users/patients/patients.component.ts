@@ -47,6 +47,7 @@ export class PatientsComponent {
             title: "Randevularım"
         };
         const dialogRef=this._dialog.open(GetAppointmentComponent,dialogCongfig)
+        
     }
     openSnackBar(message: string, action: string) {
         this._snackBar.open(message, action);

@@ -3,7 +3,7 @@ import { HospitalModel } from "./hospital.model";
 
 export class DoctorModel {
   _id: String = '';
-  name: String = '';
+  doctorName: String = '';
   branchName:BranchModel[]=[];
   hospitalName: HospitalModel[]=[]
   email: String = '';

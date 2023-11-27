@@ -1,7 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import { Observable, map } from 'rxjs';
+import { map } from 'rxjs';
 import { MaterialModule } from 'src/app/common/shared/material.module';
 import { SharedModule } from 'src/app/common/shared/shared.module';
 import { DoctorModel } from 'src/app/components/models/doctor.model';
@@ -21,7 +21,6 @@ export class CreateAppointmentComponent implements OnInit {
   form!: FormGroup;
   hospitalList: HospitalModel[] = [];
   doctorList: DoctorModel[] = [];
-
   unitList: MedicalUnits[] = [];
   hospitalSelected!: string;
   hospitalName!: string;
@@ -40,8 +39,13 @@ export class CreateAppointmentComponent implements OnInit {
   ngOnInit(): void {
     this.form = this._fb.group({
       hospitalName: ['', [Validators.required]],
-      doctorName: ['', [Validators.required]],
-      appointmentTime:["",[Validators.required]]
+      doctorName: ["", [Validators.required]],
+      unitName:["",[Validators.required]],
+      appointmentTime:["",[Validators.required]],
+      patientName: [localStorage.getItem("displayName"), [Validators.required]],
+      patientEmail: [localStorage.getItem("patientEmail"), [Validators.required]],
+      
+      
     });
    
     if (this.form) {
@@ -52,11 +56,12 @@ export class CreateAppointmentComponent implements OnInit {
         this.getAllDoctors();
       });
       this.form.get("doctorName").valueChanges.subscribe(value => {
-        this.doctorName = value;
+        this.doctorName = value.doctorName;
         this.getAvailableAppointmentTimes();
       });
     }
     this.getHospitals();
+    
     
   }
 
@@ -89,32 +94,11 @@ export class CreateAppointmentComponent implements OnInit {
   }
   getAvailableAppointmentTimes() {
 
-    this.availableAppointmentTimes = ['09:00', '10:00', '11:00', '14:00', '15:00'];
+    this.availableAppointmentTimes = ['09:00', '10:00', '11:00', "12:00",'14:00', '15:00'];
   }
   createNewAppointment(){
     this._dialogRef.close(this.form.value)
   }
 }
 
-// getHospitalById() {
-//   this._dataApi
-//     .getHospitalsByName().pipe(
-//       map(hospitalList => hospitalList.filter(hospital => hospital.hospitalName=="Altunizade")),
 
-//     )
-//     .subscribe((data) => (this.hospitalList = data));
-// }
-
-// getDoctorsByHospitalName():void {
-//   this.doctorList=this._doctors.getDoctorByName(this.hospitalSelected)
-// }
-
-// getMedicalUnit() {
-//   this._dataApi.getMedicalUnits().subscribe((res) => {
-//     this.unitList = res.map((e: any) => {
-//       const data = e.payload.doc.data();
-//       data.id = e.payload.doc.id;
-//       return data;
-//     });
-//   });
-// }

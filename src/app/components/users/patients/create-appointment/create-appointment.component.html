@@ -24,8 +24,8 @@
         <mat-form-field>
           <mat-label>Doktor</mat-label>
           <mat-select formControlName="doctorName" name="doctorName">
-            <mat-option *ngFor="let doctor of doctorList" [value]="doctor">
-              {{ doctor.branchName }}-{{ doctor.name }}
+            <mat-option *ngFor="let doctor of doctorList" [value]="doctor.doctorName">
+              {{ doctor.branchName }}-{{ doctor.doctorName }}
             </mat-option>
           </mat-select>
         </mat-form-field>

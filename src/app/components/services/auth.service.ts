@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
-import {} from 'firebase/auth';
-import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -13,10 +11,12 @@ export class AuthService {
   login(email: string, password: string) {
     this._authService.signInWithEmailAndPassword(email, password).then(
       (userCredential) => {
+        const user = userCredential.user;
         localStorage.setItem('token', 'true');
-      
+        localStorage.setItem('patientEmail', user.email);
+        localStorage.setItem("displayName",user.displayName)
+
         this._router.navigate(['']);
-        const user=userCredential.user
 
         console.log(user);
       },
@@ -44,7 +44,8 @@ export class AuthService {
         }
       );
   }
-  // getAppointmentByEmail(email:string):Observable<Appointment> {
-  //   this._authService
+
+  // getAppointmentByEmail(email:string) : Observable<AppointmentModel>{
+  //   return this._authService.
   // }
 }
