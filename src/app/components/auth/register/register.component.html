@@ -4,7 +4,7 @@
         <div class="col-12 col-md-8 col-lg-6 col-xl-5">
           <div class="card bg-dark text-white" style="border-radius: 1rem">
             <div class="card-body p-5 text-center">
-              <form
+              <form 
                 autocomplete="off"
                 #registerForm="ngForm"
                
@@ -21,7 +21,7 @@
                  
                     name="name"
                     id="name"
-                    #name
+                    [(ngModel)]="displayName"
                     
                     required
                     /><label for="name">Ad Soyad</label>
@@ -33,7 +33,7 @@
                     
                     name="email"
                     id="email"
-                    #email
+                    [(ngModel)]="email"
                     
                     required
                     />
@@ -47,7 +47,7 @@
                      
                       name="password"
                       id="password"
-                      #password
+                      [(ngModel)]="password"
                      
                       required
                     />
@@ -58,6 +58,7 @@
                     <button
                       class="btn btn-outline-light btn-lg px-5"
                       [disabled]="!registerForm.valid"
+                      (click)="register()"
                     >
                       Login
                     </button>

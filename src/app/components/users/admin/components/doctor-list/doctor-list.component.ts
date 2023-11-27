@@ -51,26 +51,26 @@ export class DoctorListComponent implements OnInit {
       this.doctorList = res.map((e: any) => {
         const data = e.payload.doc.data();
         console.log(data.date.seconds);
-        let convertedDate  = this.convertTimestampToDate(Number(data.date.seconds));
-        data.date = new Date(convertedDate);
+        // let convertedDate  = this.convertTimestampToDate(Number(data.date.seconds));
+        // data.date = new Date(convertedDate);
         data.id = e.payload.doc.id;
         return data;
       });
     });
   }
   
-  convertTimestampToDate(timeStampValue: number){
-    let date = new Date(timeStampValue * 1000);
-    console.log(timeStampValue);
-    console.log(date)
-    let day = date.getDay();
-    let month = date.getMonth();
-    let year =date.getFullYear();
+  // convertTimestampToDate(timeStampValue: number){
+  //   let date = new Date(timeStampValue * 1000);
+  //   console.log(timeStampValue);
+  //   console.log(date)
+  //   let day = date.getDay();
+  //   let month = date.getMonth();
+  //   let year =date.getFullYear();
 
-    let formattedTime = day + '.' + month + '.' + year;
-    console.log(formattedTime);
-    return formattedTime;
-  }
+  //   let formattedTime = day + '.' + month + '.' + year;
+  //   console.log(formattedTime);
+  //   return formattedTime;
+  // }
 
   openSnackBar(message: string, action: string) {
     this._snackBar.open(message, action);

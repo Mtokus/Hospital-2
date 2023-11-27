@@ -15,6 +15,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatPaginatorModule} from '@angular/material/paginator';
 import { MatSortModule} from '@angular/material/sort';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatIconModule} from '@angular/material/icon';
+
+
 
 
 @NgModule({
@@ -34,7 +37,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatCardModule,
     MatPaginatorModule,
     MatSortModule,
-    MatButtonModule,MatSidenavModule
+    MatButtonModule,MatSidenavModule,MatIconModule
   ],
   exports: [
     CommonModule,
@@ -53,7 +56,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatPaginatorModule,
     MatSortModule,
     MatSidenavModule
-
+,MatIconModule
     
   ],
 })

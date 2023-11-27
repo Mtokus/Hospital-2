@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { Observable, filter, map, tap } from 'rxjs';
 import { DoctorModel } from '../models/doctor.model';
 
 @Injectable({
@@ -10,8 +9,8 @@ export class DataService {
   constructor(private _afs: AngularFirestore) {}
   // Doktor İşlemleri
 
-  addDoctor(doctor: any) {
-    doctor.id = this._afs.createId();
+  addDoctor(doctor: DoctorModel) {
+    doctor._id = this._afs.createId();
     return this._afs.collection('Doctor/').add(doctor);
   }
   getAllDoctors() {

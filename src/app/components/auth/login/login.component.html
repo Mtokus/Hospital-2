@@ -19,12 +19,12 @@
                     <input
                       class="form-control"
                       type="email"
-                      ngModel
+                      [(ngModel)]="email"
                       name="email"
                       id="email"
                       required
                       email
-                      #email
+                   
                      
                     />
                     <label class="form-label" for="typeEmailX">Email</label>
@@ -34,10 +34,10 @@
                     <input
                       class="form-control"
                       type="password"
-                      ngModel
+                      [(ngModel)]="password"
                       name="password"
                       id="password"
-                      #password
+                      
                       required
                     
                     />
@@ -46,7 +46,7 @@
   
   
                   <div class="form-group">
-                    <button class="btn btn-outline-light btn-lg px-5" [disabled]="!loginForm.valid">Login</button>
+                    <button class="btn btn-outline-light btn-lg px-5" [disabled]="!loginForm.valid" (click)="login()">Login</button>
                   </div>
   
                   <div

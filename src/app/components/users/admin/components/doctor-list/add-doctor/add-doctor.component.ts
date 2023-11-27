@@ -6,6 +6,11 @@ import { MaterialModule } from 'src/app/common/shared/material.module';
 import { HospitalModel } from 'src/app/components/models/hospital.model';
 import { DataService } from 'src/app/components/services/data.service';
 import { BranchModel } from 'src/app/components/models/branch.model';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+
 
 @Component({
   selector: 'app-add-doctor',
@@ -17,6 +22,7 @@ import { BranchModel } from 'src/app/components/models/branch.model';
 export class AddDoctorComponent implements OnInit {
   form!: FormGroup;
   title!: string;
+  hide: boolean=true
 
   name!: string;
   branchList: BranchModel[]=[];
